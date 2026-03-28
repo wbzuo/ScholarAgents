@@ -3,10 +3,11 @@
 ## 文献支撑结果
 这是一个面向文献调研的初步响应：
 [mock:mock-default] 围绕“请结合 related work 帮我写 drought monitoring 论文 introduction”生成了一段可预测的literature_review响应，用于本地开发、回归测试和无 API key 环境。
-1. 明确研究主题与关键词范围。
-2. 按研究问题、方法路线和数据来源整理代表性论文。
-3. 提炼每篇工作的核心贡献、局限与可借鉴点。
-4. 最后输出一版适合写入 related work 的综述框架。
+1. 候选论文：1. Mock arXiv paper 1 for 请结合 related work 帮我写 drought monitoring 论文 introduction (2020) - Author 1A, Author 1B; 2. Mock arXiv paper 2 for 请结合 related work 帮我写 drought monitoring 论文 introduction (2021) - Author 2A, Author 2B; 3. Mock arXiv paper 3 for 请结合 related work 帮我写 drought monitoring 论文 introduction (2022) - Author 3A, Author 3B
+2. 明确研究主题与关键词范围。
+3. 按研究问题、方法路线和数据来源整理代表性论文。
+4. 提炼每篇工作的核心贡献、局限与可借鉴点。
+5. 最后输出一版适合写入 related work 的综述框架。
 
 ## 论文写作结果
 这是一个面向综述写作的结构化结果：
@@ -15,10 +16,11 @@
 参考上一步结果：
 这是一个面向文献调研的初步响应：
 [mock:mock-default] 围绕“请结合 related work 帮我写 drought monitoring 论文 introduction”生成了一段可预测的literature_review响应，用于本地开发、回归测试和无 API key 环境。
-1. 明确研究主题与关键词范围。
-2. 按研究问题、方法路线和数据来源整理代表性论文。
-3. 提炼每篇工作的核心贡献、局限与可借鉴点。
-4. 最后输出一版适合写入 related work 的综述框架。
+1. 候选论文：1. Mock arXiv paper 1 for 请结合 related work 帮我写 drought monitoring 论文 introduction (2020) - Author 1A, Author 1B; 2. Mock arXiv paper 2 for 请结合 related work 帮我写 drought monitoring 论文 introduction (2021) - Author 2A, Author 2B; 3. Mock arXiv paper 3 for 请结合 related work 帮我写 drought monitoring 论文 introduction (2022) - Author 3A, Author 3B
+2. 明确研究主题与关键词范围。
+3. 按研究问题、方法路线和数据来源整理代表性论文。
+4. 提炼每篇工作的核心贡献、局限与可借鉴点。
+5. 最后输出一版适合写入 related work 的综述框架。
 1. 研究背景：交代问题的重要性、应用价值与现实动机。
 2. 核心问题：明确现有工作仍未解决的关键挑战。
 3. 相关研究：概述主流方法路线与代表性工作。

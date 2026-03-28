@@ -53,6 +53,7 @@ class PaperWritingWorkflow:
             ctx.log("Workflow step 1: LiteratureAgent")
             literature_result = self.literature_agent.run(ctx)
             shared_memory.set_result("literature_agent", literature_result)
+            shared_memory.set_result("retrieved_papers", ctx.shared_memory.get("retrieved_papers", []))
             ctx.shared_memory["literature_review_notes"] = literature_result
             self._copy_skill_records(ctx, shared_memory, "literature_agent")
 

@@ -8,12 +8,14 @@ from scholaragents.config import load_generation_config
 from scholaragents.core.artifact import Artifact, ArtifactSection
 from scholaragents.core.planner import WorkflowPlanner
 from scholaragents.memory.short_term_memory import ShortTermMemory
+from scholaragents.mcp.arxiv_mcp import ArxivMCPClient
 from scholaragents.models import create_model_client
 from scholaragents.models.response_parser import ResponseParser
 from scholaragents.models.retry_policy import RetryPolicy
 from scholaragents.models.usage_tracker import UsageTracker
 from scholaragents.skills.experiment_planning import ExperimentPlanningSkill
 from scholaragents.skills.outline_generation import OutlineGenerationSkill
+from scholaragents.skills.paper_search import PaperSearchSkill
 from scholaragents.skills.paper_summary import PaperSummarySkill
 from scholaragents.skills.result_formatting import ResultFormattingSkill
 from scholaragents.workflows.experiment_design_workflow import ExperimentDesignWorkflow
@@ -40,6 +42,7 @@ class MultiAgentSystem:
             usage_tracker=self.usage_tracker,
             retry_policy=self.retry_policy,
         )
+        self.retrieval_client = ArxivMCPClient()
         self.result_formatter = ResultFormattingSkill()
         self.planner = WorkflowPlanner()
         self._register_default_agents()
@@ -49,6 +52,7 @@ class MultiAgentSystem:
     def _register_default_agents(self) -> None:
         self.registry.register(
             LiteratureAgent(
+                paper_search=PaperSearchSkill(client=self.retrieval_client),
                 paper_summary=PaperSummarySkill(model_client=self.model_client),
                 result_formatter=self.result_formatter,
             )

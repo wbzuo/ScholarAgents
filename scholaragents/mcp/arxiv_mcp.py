@@ -13,6 +13,9 @@ class ArxivMCPClient(BaseMCPClient):
         results = [
             {
                 "title": f"Mock arXiv paper {index + 1} for {query}",
+                "summary": f"This is a mock summary for paper {index + 1} about {query}.",
+                "year": 2020 + (index % 5),
+                "authors": [f"Author {index + 1}A", f"Author {index + 1}B"],
                 "source": "arxiv",
             }
             for index in range(top_k)

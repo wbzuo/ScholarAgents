@@ -22,7 +22,7 @@
       }
     ],
     "artifact_title": "Experiment Design Artifact",
-    "exported_at": "2026-03-28T15:31:56",
+    "exported_at": "2026-03-28T15:42:37",
     "markdown_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/markdown/experiment_design_workflow/experiment_design_workflow__case_7.md",
     "json_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/json/experiment_design_workflow/experiment_design_workflow__case_7.json"
   },
@@ -49,7 +49,7 @@
       }
     ],
     "artifact_title": "Literature Review Artifact",
-    "exported_at": "2026-03-28T15:31:56",
+    "exported_at": "2026-03-28T15:42:37",
     "markdown_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/markdown/literature_review_workflow/literature_review_workflow__case_1.md",
     "json_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/json/literature_review_workflow/literature_review_workflow__case_1.json"
   },
@@ -76,7 +76,7 @@
       }
     ],
     "artifact_title": "Literature Review Artifact",
-    "exported_at": "2026-03-28T15:31:56",
+    "exported_at": "2026-03-28T15:42:37",
     "markdown_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/markdown/literature_review_workflow/literature_review_workflow__case_5.md",
     "json_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/json/literature_review_workflow/literature_review_workflow__case_5.json"
   },
@@ -103,7 +103,7 @@
       }
     ],
     "artifact_title": "Paper Writing Artifact",
-    "exported_at": "2026-03-28T15:31:56",
+    "exported_at": "2026-03-28T15:42:37",
     "markdown_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/markdown/paper_writing_workflow/paper_writing_workflow__case_6.md",
     "json_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/json/paper_writing_workflow/paper_writing_workflow__case_6.json"
   }

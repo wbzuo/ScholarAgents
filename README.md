@@ -17,6 +17,7 @@ Current capabilities include:
 - structured `artifact` output
 - local artifact export to Markdown and JSON
 - a configurable `models/` layer with `mock` and `openai` providers
+- a first retrieval path for literature workflows through `PaperSearchSkill` and `ArxivMCPClient`
 
 The default experience is intentionally safe and local-first: `MODEL_PROVIDER=mock` works without any API key and keeps the demo fully runnable.
 
@@ -135,6 +136,7 @@ ScholarAgents/
 
 ### Skills
 
+- `PaperSearchSkill`
 - `PaperSummarySkill`
 - `OutlineGenerationSkill`
 - `ExperimentPlanningSkill`
@@ -154,6 +156,15 @@ The `models/` package provides a unified client abstraction for skills:
 - `exceptions.py`: unified model exceptions
 
 Skills do not need to know which provider is active. They only call `model_client.generate(...)`.
+
+### Retrieval Layer
+
+The current literature path also includes a lightweight retrieval step:
+
+- `PaperSearchSkill`: skill wrapper for literature retrieval
+- `ArxivMCPClient`: stub arXiv-style connector for local development
+
+The default retrieval path remains local and deterministic so the demo can run without external services, while leaving room for future real search connectors.
 
 ## How Routing Works
 
@@ -201,6 +212,8 @@ Current `task_info` may include:
 - `selected_writing_mode`
 - `model_provider`
 - `model_name`
+
+Literature-oriented workflows may also write retrieved paper candidates into shared memory so later agents can reuse them.
 
 ## Artifact Output
 
