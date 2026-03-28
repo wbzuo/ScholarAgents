@@ -1,0 +1,21 @@
+[project]
+name = "scholaragents"
+version = "0.1.0"
+description = "A modular multi-agent framework for scholarly research workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai>=1.30.0"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scholaragents*"]

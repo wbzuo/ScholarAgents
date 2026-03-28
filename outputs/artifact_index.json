@@ -1,0 +1,110 @@
+[
+  {
+    "workflow_name": "experiment_design_workflow",
+    "case_name": "case_7",
+    "query": "请帮我设计 SPEI 预测实验，并写 experiments 章节框架",
+    "selected_writing_mode": "experiment_section",
+    "task_plan": [
+      {
+        "step": "1",
+        "agent": "ExperimentAgent",
+        "action": "生成实验设计"
+      },
+      {
+        "step": "2",
+        "agent": "WritingAgent",
+        "action": "生成 experiments 章节框架"
+      },
+      {
+        "step": "3",
+        "agent": "GeneralAgent",
+        "action": "给出章节组织建议"
+      }
+    ],
+    "artifact_title": "Experiment Design Artifact",
+    "exported_at": "2026-03-28T15:07:12",
+    "markdown_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/markdown/experiment_design_workflow/experiment_design_workflow__case_7.md",
+    "json_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/json/experiment_design_workflow/experiment_design_workflow__case_7.json"
+  },
+  {
+    "workflow_name": "literature_review_workflow",
+    "case_name": "case_1",
+    "query": "帮我整理干旱监测方向的文献",
+    "selected_writing_mode": "literature_review",
+    "task_plan": [
+      {
+        "step": "1",
+        "agent": "LiteratureAgent",
+        "action": "整理文献"
+      },
+      {
+        "step": "2",
+        "agent": "WritingAgent",
+        "action": "生成综述骨架"
+      },
+      {
+        "step": "3",
+        "agent": "GeneralAgent",
+        "action": "给出 related work 扩写建议"
+      }
+    ],
+    "artifact_title": "Literature Review Artifact",
+    "exported_at": "2026-03-28T15:07:12",
+    "markdown_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/markdown/literature_review_workflow/literature_review_workflow__case_1.md",
+    "json_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/json/literature_review_workflow/literature_review_workflow__case_1.json"
+  },
+  {
+    "workflow_name": "literature_review_workflow",
+    "case_name": "case_5",
+    "query": "请帮我完成干旱监测方向的文献综述",
+    "selected_writing_mode": "literature_review",
+    "task_plan": [
+      {
+        "step": "1",
+        "agent": "LiteratureAgent",
+        "action": "整理文献"
+      },
+      {
+        "step": "2",
+        "agent": "WritingAgent",
+        "action": "生成综述骨架"
+      },
+      {
+        "step": "3",
+        "agent": "GeneralAgent",
+        "action": "给出 related work 扩写建议"
+      }
+    ],
+    "artifact_title": "Literature Review Artifact",
+    "exported_at": "2026-03-28T15:07:12",
+    "markdown_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/markdown/literature_review_workflow/literature_review_workflow__case_5.md",
+    "json_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/json/literature_review_workflow/literature_review_workflow__case_5.json"
+  },
+  {
+    "workflow_name": "paper_writing_workflow",
+    "case_name": "case_6",
+    "query": "请结合 related work 帮我写 drought monitoring 论文 introduction",
+    "selected_writing_mode": "introduction_related_work",
+    "task_plan": [
+      {
+        "step": "1",
+        "agent": "LiteratureAgent",
+        "action": "提供相关研究支撑"
+      },
+      {
+        "step": "2",
+        "agent": "WritingAgent",
+        "action": "生成 introduction/related work 骨架"
+      },
+      {
+        "step": "3",
+        "agent": "GeneralAgent",
+        "action": "给出扩写建议"
+      }
+    ],
+    "artifact_title": "Paper Writing Artifact",
+    "exported_at": "2026-03-28T15:07:12",
+    "markdown_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/markdown/paper_writing_workflow/paper_writing_workflow__case_6.md",
+    "json_path": "/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/json/paper_writing_workflow/paper_writing_workflow__case_6.json"
+  }
+]
