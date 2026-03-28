@@ -2,6 +2,10 @@
 
 ScholarAgents is a lightweight multi-agent research assistant prototype for academic workflows. It keeps the system modular while staying easy to run locally with pure Python.
 
+Current version: `v0.9`  
+Latest release notes: [CHANGELOG.md](/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/CHANGELOG.md)  
+License: [MIT](/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/LICENSE)
+
 Current capabilities include:
 
 - single-agent routing
@@ -15,6 +19,26 @@ Current capabilities include:
 - a configurable `models/` layer with `mock` and `openai` providers
 
 The default experience is intentionally safe and local-first: `MODEL_PROVIDER=mock` works without any API key and keeps the demo fully runnable.
+
+## Quick Start
+
+Install in editable mode:
+
+```bash
+pip install -e .
+```
+
+Run the main demo:
+
+```bash
+python examples/demo.py
+```
+
+Run with the explicit mock provider:
+
+```bash
+MODEL_PROVIDER=mock python examples/demo.py
+```
 
 ## Architecture
 
@@ -219,6 +243,8 @@ The index includes:
 - `task_plan`
 - `artifact_title`
 - export paths
+
+The repository currently keeps a small set of generated example outputs under [outputs/README.md](/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/outputs/README.md) so the export pipeline is visible directly on GitHub.
 
 ## Models Usage
 
