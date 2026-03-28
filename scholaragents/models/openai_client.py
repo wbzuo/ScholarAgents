@@ -29,7 +29,15 @@ class OpenAIModelClient(BaseModelClient):
             self._client = None
         else:
             self._sdk_error = None
-            self._client = OpenAI(api_key=self.api_key, timeout=self.config.timeout) if self.api_key else None
+            self._client = (
+                OpenAI(
+                    api_key=self.api_key,
+                    base_url=self.config.base_url,
+                    timeout=self.config.timeout,
+                )
+                if self.api_key
+                else None
+            )
 
     def _generate_once(self, prompt: str) -> str:
         if not self.api_key:
@@ -40,6 +48,23 @@ class OpenAIModelClient(BaseModelClient):
                     "The openai package is not installed. Install it to use MODEL_PROVIDER=openai."
                 ) from self._sdk_error
             raise ModelClientError("OpenAI client could not be initialized.")
+
+        if self.config.base_url:
+            response = self._client.chat.completions.create(
+                model=self.model_name,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=self.config.temperature,
+                top_p=self.config.top_p,
+                max_tokens=self.config.max_output_tokens,
+            )
+            choices = getattr(response, "choices", None) or []
+            if not choices:
+                raise ModelClientError("Compatible chat completions API returned no choices.")
+            message = getattr(choices[0], "message", None)
+            content = getattr(message, "content", None)
+            if not content:
+                raise ModelClientError("Compatible chat completions API returned empty content.")
+            return self.parser.parse_text(content)
 
         response = self._client.responses.create(
             model=self.model_name,

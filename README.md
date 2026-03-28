@@ -306,6 +306,7 @@ Supported environment variables:
 MODEL_PROVIDER=mock
 MOCK_MODEL_NAME=mock-default
 OPENAI_MODEL=gpt-5.4
+OPENAI_BASE_URL=
 OPENAI_API_KEY=...
 MODEL_TEMPERATURE=0.2
 MODEL_MAX_OUTPUT_TOKENS=600
@@ -313,6 +314,15 @@ MODEL_TIMEOUT=30
 MODEL_TOP_P=1.0
 MODEL_FALLBACK_TO_MOCK=true
 MODEL_USE_CACHE=false
+```
+
+For OpenAI-compatible providers such as DeepSeek, set:
+
+```bash
+MODEL_PROVIDER=openai
+OPENAI_BASE_URL=https://api.deepseek.com
+OPENAI_MODEL=deepseek-chat
+OPENAI_API_KEY=...
 ```
 
 ## Trace and Provider Visibility

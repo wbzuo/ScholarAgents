@@ -14,6 +14,7 @@ def load_generation_config() -> GenerationConfig:
     return GenerationConfig(
         provider=provider,
         model_name=model_name,
+        base_url=os.getenv("OPENAI_BASE_URL", "").strip() or None,
         temperature=float(os.getenv("MODEL_TEMPERATURE", "0.2")),
         max_output_tokens=int(os.getenv("MODEL_MAX_OUTPUT_TOKENS", "600")),
         timeout=float(os.getenv("MODEL_TIMEOUT", "30")),

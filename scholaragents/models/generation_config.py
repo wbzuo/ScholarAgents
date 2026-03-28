@@ -7,6 +7,7 @@ from dataclasses import dataclass
 class GenerationConfig:
     provider: str = "mock"
     model_name: str = "gpt-5.4"
+    base_url: str | None = None
     temperature: float = 0.2
     max_output_tokens: int = 600
     timeout: float = 30.0
