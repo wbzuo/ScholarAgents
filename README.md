@@ -369,4 +369,4 @@ The current codebase has evolved from:
 
 ## License
 
-This repository currently does not declare a separate license file. Add one if you plan to distribute it publicly.
+This project is licensed under the MIT License. See [LICENSE](/Users/wbzuo/Documents/04-Developer/Source-Code/github/ScholarAgents/LICENSE) for details.
